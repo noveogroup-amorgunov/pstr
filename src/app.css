@@ -1,0 +1,34 @@
+@import './variables.css';
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--primary-color);
+  font-family: var(--font-family-set);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.logo {
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 40px;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: var(--font-family-actions-set);
+}

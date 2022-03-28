@@ -1,0 +1,50 @@
+@import '../../variables.css';
+
+.postlist {
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+
+.postlist ul {
+  padding: 0;
+}
+
+.postlist li {
+  padding: 0;
+  list-style: none;
+}
+
+.postlist__date {
+  min-width: 90px;
+  padding-right: 5px;
+}
+
+.postlist__title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 700;
+  flex-grow: 1;
+}
+
+.postlist__link {
+  display: flex;
+}
+
+.postlist__item_draggable {
+  user-select: none;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.postlist__item_draggable a {
+  color: var(--secondary-color);
+}
+
+.postlist__delete {
+  opacity: 0;
+}
+
+.postlist__item:hover .postlist__delete {
+  opacity: 1;
+}

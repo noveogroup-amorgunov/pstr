@@ -1,0 +1,11 @@
+:root {
+  --screen-max-width: 720px;
+  --font-family-set: Georgia, serif;
+  --font-family-actions-set: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  --primary-color: #1600fe;
+  --secondary-color: #ffffff;
+
+  --writer-text-color: #000000;
+  --writer-bg-color: #f6ecda;
+}
