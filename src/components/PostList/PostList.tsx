@@ -11,7 +11,7 @@ import { useEnhance } from './PostList.hook';
 import './styles.css';
 
 const getListStyle = (isDraggingOver: boolean) => ({
-  background: isDraggingOver ? 'var(--primary-color)' : 'transparent',
+  background: isDraggingOver ? 'var(--writer-bg-color)' : 'transparent',
   width: '100%',
 });
 
