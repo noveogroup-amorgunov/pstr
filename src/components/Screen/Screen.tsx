@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { observer } from 'mobx-react-lite';
-import { StoreContext, ScreenName } from '~/src/store';
+import { StoreContext } from '~/src/store';
+import { ScreenName } from '~/src/store/app';
 
 import Editor from '../Editor';
 import PostList from '../PostList';

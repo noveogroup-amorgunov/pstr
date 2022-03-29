@@ -1,5 +1,6 @@
 import { useRef, useContext } from 'react';
 import { StoreContext } from '~/src/store';
+import { useThrottledCallback } from '~/src/helpers/useThrottledCallback';
 
 export const useEnhance = (postId: PostId) => {
   const store = useContext(StoreContext);
@@ -16,9 +17,34 @@ export const useEnhance = (postId: PostId) => {
     store.app.changeScreen('list', {});
   };
 
+  const onPublish = useThrottledCallback(() => {
+    store.telegram.publishPost({
+      text: post.text,
+    });
+
+    store.post.updatePost(
+      post,
+      post.text.replace(/{status=.*}/, `{status=published}`)
+    );
+  }, [post]);
+
+  const onPublishToTest = useThrottledCallback(() => {
+    store.telegram.publishPost({
+      text: post.text,
+      isTesting: true,
+    });
+
+    store.post.updatePost(
+      post,
+      post.text.replace(/{status=.*}/, `{status=published_to_test}`)
+    );
+  }, [post]);
+
   return {
     onInput,
     onBack,
+    onPublish,
+    onPublishToTest,
     defaultValue,
   }
 };

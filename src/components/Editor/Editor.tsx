@@ -9,6 +9,8 @@ export const Editor = observer((props: EditorProps) => {
   const {
     onInput,
     onBack,
+    onPublish,
+    onPublishToTest,
     defaultValue,
   } = useEnhance(props.params.id as PostId);
 
@@ -22,8 +24,8 @@ export const Editor = observer((props: EditorProps) => {
         >
           ←
         </a>
-        <a href="#">puslish</a>
-        <a href="#">puslish to test</a>
+        <a href="#" onClick={onPublish}>puslish</a>
+        <a href="#" onClick={onPublishToTest}>puslish to test</a>
       </div>
       <div
         className="draft"
